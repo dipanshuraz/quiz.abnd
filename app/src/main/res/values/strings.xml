@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">QuizApp ABND</string>
+    <string name="tview1">Languages and their Founder Quiz</string>
+    <string name="que1">1. C Language</string>
+    <string name="ans1">Dennis Ritchie</string>
+    <string name="ans2">Lars Bak</string>
+    <string name="ans3">James Gosling</string>
+    <string name="ans4">Jetbrains</string>
+    <string name="que2">2. Perl Language</string>
+    <string name="ans21">Guido van Rossum</string>
+    <string name="ans22">Larry Wall</string>
+    <string name="ans23">Rich Hickey</string>
+    <string name="ans24">Barbara Liskov</string>
+    <string name="que3">3. Who created Ecmascript</string>
+    <string name="chk1">Ecma International</string>
+    <string name="chk2">Lars Bak</string>
+    <string name="chk3">Brendan Eich</string>
+    <string name="hint">4. Who Designed Dart :</string>
+    <string name="sub">Submit</string>
+</resources>
