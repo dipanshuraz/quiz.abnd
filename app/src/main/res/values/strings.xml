@@ -17,4 +17,9 @@
     <string name="chk3">Brendan Eich</string>
     <string name="hint">4. Who Designed Dart :</string>
     <string name="sub">Submit</string>
+    <string name="lars">Lars Bak</string>
+    <string name="firstQue">First Question</string>
+    <string name="secQue">Second Question</string>
+    <string name="thirdQue">Third Question</string>
+    <string name="fourthQue">Fourth Question</string>
 </resources>

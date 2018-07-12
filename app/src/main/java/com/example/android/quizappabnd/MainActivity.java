@@ -12,10 +12,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    
-    final int answer1 = R.id.radio_dennis;
-    final int answer2 = R.id.radio_larry;
-    final String answer4 = "Lars Bak";
+
+    private final int answer1 = R.id.radio_dennis;
+    private final int answer2 = R.id.radio_larry;
+    private final String answer4 = "Lars Bak";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,37 +28,36 @@ public class MainActivity extends AppCompatActivity {
 
         int numberOfRightQuestions = 0;
 
-        if(answer1()) {
+        if (answer1()) {
             numberOfRightQuestions++;
         } else {
-            wrongAnswersList.add("First Question");
+            wrongAnswersList.add(getString(R.string.firstQue));
         }
 
-        if(answer2()) {
+        if (answer2()) {
             numberOfRightQuestions++;
         } else {
-            wrongAnswersList.add("Second Question");
+            wrongAnswersList.add(getString(R.string.secQue));
         }
-        if(answer3()) {
+        if (answer3()) {
             numberOfRightQuestions++;
         } else {
-            wrongAnswersList.add("Third Question");
+            wrongAnswersList.add(getString(R.string.thirdQue));
         }
-        if(answer4()) {
+        if (answer4()) {
             numberOfRightQuestions++;
         } else {
-            wrongAnswersList.add("Fourth Question");
+            wrongAnswersList.add(getString(R.string.fourthQue));
         }
 
-        StringBuilder sb = new StringBuilder();
-        for (String s: wrongAnswersList)
-        {
-            sb.append(s);
-            sb.append("\n");
+        StringBuilder strbuilder = new StringBuilder();
+        for (String s : wrongAnswersList) {
+            strbuilder.append(s);
+            strbuilder.append("\n");
         }
 
         Context context = getApplicationContext();
-        CharSequence text = "Correct" + numberOfRightQuestions+ "/4 Questions Correct.\n\nRe-Check :\n" + sb.toString();
+        CharSequence text = " Correct" + numberOfRightQuestions + "/4 Questions Correct.\n\nRe-Check :\n" + strbuilder.toString();
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
@@ -66,21 +65,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean answer1() {
-        RadioGroup rg = (RadioGroup) findViewById(R.id.ans_c);
+        RadioGroup rg = (RadioGroup) findViewById(R.id.queNum1);
 
         if (rg.getCheckedRadioButtonId() == answer1) {
             return true;
         }
         return false;
     }
+
     private boolean answer2() {
-        RadioGroup rg = (RadioGroup) findViewById(R.id.ans_perl);
+        RadioGroup rg = (RadioGroup) findViewById(R.id.queNum2);
 
         if (rg.getCheckedRadioButtonId() == answer2) {
             return true;
         }
         return false;
     }
+
     private boolean answer3() {
         CheckBox c1 = (CheckBox) findViewById(R.id.checkBox_ecma);
         CheckBox c2 = (CheckBox) findViewById(R.id.checkBox_eich);
@@ -93,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    private boolean answer4 () {
-        EditText et = (EditText)findViewById(R.id.dart_edittext);
+    private boolean answer4() {
+        EditText et = (EditText) findViewById(R.id.dart_edittext);
 
         return et.getText().toString().equalsIgnoreCase(answer4);
     }
